@@ -1,0 +1,23 @@
+.navigation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.link{
+    font-size: 24px;
+    color: black;
+
+}
+.link:not(:last-child){
+    margin-right: 10px;
+}
+.linkActive{
+    font-size: 24px;
+    color :purple;
+    border-bottom: 1px solid purple;
+
+}
+.linkActive:not(:last-child){
+    margin-right: 10px;
+}
