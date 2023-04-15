@@ -1,17 +1,17 @@
 <h1>Welcome to my TWEETS project!</h1>
 
-<br>User card</br> displays the number of tweets and followers. 
+<b>User card</b> displays the number of tweets and followers. 
 
-You are allowed to <br>subscribe and unsubscribe</br>  on users - just click on the button.
+You are allowed to <b>subscribe and unsubscribe</b>  on users - just click on the button.
 
-There is allowed <br>pagination</br> of your results: you can get at first only 9 results and load more by clicking on the button.
+There is allowed <b>pagination</b> of your results: you can get at first only 9 results and load more by clicking on the button.
 
-You also can <br>filter</br> your results : all, follow, following.
+You also can <b>filter</b> your results : all, follow, following.
 
 ![Screenshot 1](/src/images/scr1.png)
 ![Screenshot 2](/src/images/scr2.png)
 ![Screenshot 3](/src/images/scr3.png)
 ![Screenshot 4](/src/images/scr4.png)
 
-Life page is available <br>[here](sonyaaat.github.io/tweets-test-task/)</br>
+Life page is available <b>[here](sonyaaat.github.io/tweets-test-task/)</b>
 Enjoy using my app!
