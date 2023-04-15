@@ -13,5 +13,6 @@ You also can <b>filter</b> your results : all, follow, following.
 <img src="/src/images/scr4.png" width="200"/>
 
 
-Life page is available <b>[here](sonyaaat.github.io/tweets-test-task/)</b>
+Life page is available <b>[here](sonyaaat.github.io/tweets-test-task/)</b>.
+
 Enjoy using my app!
