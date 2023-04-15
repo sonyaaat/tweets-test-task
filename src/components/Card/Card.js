@@ -1,50 +1,39 @@
-import { useState } from 'react';
 import logo from '../../images/logo.png';
 import main from '../../images/main.png';
 import css from './Card.module.css';
-const Card = ({ data }) => {
+const Card = ({ data, onChange }) => {
   const { followers, avatar, id, tweets } = data;
   let ls = JSON.parse(localStorage.getItem('users'));
   if (!ls) {
     ls = [];
   }
-  console.log('LS', ls);
-  const [isFollowed, setIsFollowed] = useState(
-    ls.length > 0 ? ls.some(el => el.id === id) : false
-  );
-
+  const arrayOfIds = ls.map(obj => obj.id);
   const handleChange = id => {
-    console.log(id);
+
     const object = {
       id: id,
       value: true,
     };
     const storage = JSON.parse(localStorage.getItem('users'));
-    if (storage) {
-      const alreadyIs = storage.find(el => el.id === id);
-      if (alreadyIs) {
-        const filtered = storage.filter(el => el.id !== id);
-        localStorage.setItem('users', JSON.stringify([...filtered]));
-        console.log('is', filtered);
-        setIsFollowed(false);
-        return;
-      }
-      const newLocal = [storage, { id: id, value: true }];
-      console.log(newLocal);
-      localStorage.setItem('users', JSON.stringify([...storage, object]));
-      setIsFollowed(true);
-    } else {
+    if (!storage) {
       localStorage.setItem('users', JSON.stringify([object]));
-      setIsFollowed(true);
+      onChange(prev=>!prev);
+      return;
     }
-    console.log(storage);
+    const alreadyIs = storage.find(el => el.id === id);
+    if (alreadyIs) {
+      const filtered = storage.filter(el => el.id !== id);
+      localStorage.setItem('users', JSON.stringify([...filtered]));
+      onChange(prev=>!prev);
+      return;
+    }
+    localStorage.setItem('users', JSON.stringify([...storage, object]));
+    onChange(prev=>!prev);
   };
-  const formatedFollowers=(val)=>new Intl.NumberFormat('en-US').format( val);
-
+  const formatedFollowers = val => new Intl.NumberFormat('en-US').format(val);
   return (
     <>
-      <div className={css.card} onClick={() => handleChange(id)}>
-       
+      <div className={css.card} >
         <img alt="logo" src={logo} className={css.logo} />
         <img alt="main" src={main} className={css.mainImg} />
         <div className={css.line}></div>
@@ -53,10 +42,17 @@ const Card = ({ data }) => {
         </div>
         <div className={css.textBox}>
           <p className={css.text}>{tweets} tweets</p>
-          <p className={css.text}>{isFollowed ? formatedFollowers(followers+1) :formatedFollowers(followers)} followers</p>
-          {isFollowed? <button className={css.buttonFollowing }>following</button>
-          :
-          <button className={ css.button}>follow</button>}
+          <p className={css.text}>
+            {arrayOfIds.includes(id)
+              ? formatedFollowers(followers + 1)
+              : formatedFollowers(followers)}{' '}
+            followers
+          </p>
+          {arrayOfIds.includes(id) ? (
+            <button className={css.buttonFollowing} onClick={() => handleChange(id)}>following</button>
+          ) : (
+            <button className={css.button} onClick={() => handleChange(id)}>follow</button>
+          )}
         </div>
       </div>
     </>

@@ -3,11 +3,11 @@ import css from "./Header.module.css"
 const Header=()=>{
 return(
     <nav className={css.navigation}>
-        <NavLink to="/home"  className={({ isActive }) =>
-                      isActive ? `${css.linkActive}` : `${css.link}`
-                    }>Home</NavLink>
         <NavLink to="/main"  className={({ isActive }) =>
-                      isActive ? `${css.linkActive}` : `${css.link}`}>Main</NavLink>
+                      isActive ? `${css.linkActive}` : `${css.link}`
+                    }>Main</NavLink>
+        <NavLink to="/tweets"  className={({ isActive }) =>
+                      isActive ? `${css.linkActive}` : `${css.link}`}>Tweets</NavLink>
     </nav>
 )
 }
