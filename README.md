@@ -8,10 +8,10 @@ There is allowed <b>pagination</b> of your results: you can get at first only 9 
 
 You also can <b>filter</b> your results : all, follow, following.
 
-![Screenshot 1](/src/images/scr1.png)
-![Screenshot 2](/src/images/scr2.png)
-![Screenshot 3](/src/images/scr3.png)
-![Screenshot 4](/src/images/scr4.png)
+![Screenshot 1](/src/images/scr1.png =x250)
+![Screenshot 2](/src/images/scr2.png =x250)
+![Screenshot 3](/src/images/scr3.png =x250)
+![Screenshot 4](/src/images/scr4.png =x250)
 
 Life page is available <b>[here](sonyaaat.github.io/tweets-test-task/)</b>
 Enjoy using my app!
