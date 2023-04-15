@@ -10,7 +10,7 @@ You also can <b>filter</b> your results : all, follow, following.
 <img src="/src/images/scr1.png" width="1000"/>
 <img src="/src/images/scr2.png" width="300"/>
 <img src="/src/images/scr3.png" width="300"/>
-<img src="/src/images/scr4.png" width="300"/>
+<img src="/src/images/scr4.png" width="200"/>
 
 
 Life page is available <b>[here](sonyaaat.github.io/tweets-test-task/)</b>
