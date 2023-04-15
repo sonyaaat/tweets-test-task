@@ -1,6 +1,5 @@
 import Card from 'components/Card/Card';
 import css from './List.module.css';
-import axios from 'axios';
 import { useEffect, useState } from 'react';
 import FadeLoader from 'react-spinners/FadeLoader';
 import { getAllUsers } from 'api';
